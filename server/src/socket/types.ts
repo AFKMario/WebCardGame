@@ -15,15 +15,16 @@ import {
   VoteResultPayload,
   VoteSubmitPayload,
 } from "../shared/payloads/vote";
+import { GenericResponse } from "../shared/responses/GenericResponse";
 
 // --- Define what the client sends to the server
 export interface ClientToServerEvents {
-  [Events.PlayerConnect]: () => void;
-  [Events.CardAccept]: (payload: CardAcceptPayload) => void;
-  [Events.CardFaceDown]: (payload: CardFaceDownPayload) => void;
-  [Events.CardPass]: (payload: CardPassPayload) => void;
-  [Events.CardReject]: (payload: CardRejectPayload) => void;
-  [Events.VoteSubmit]: (payload: VoteSubmitPayload) => void;
+  [Events.PlayerConnect]: () => GenericResponse;
+  [Events.CardAccept]: (payload: CardAcceptPayload) => GenericResponse;
+  [Events.CardFaceDown]: (payload: CardFaceDownPayload) => GenericResponse;
+  [Events.CardPass]: (payload: CardPassPayload) => GenericResponse;
+  [Events.CardReject]: (payload: CardRejectPayload) => GenericResponse;
+  [Events.VoteSubmit]: (payload: VoteSubmitPayload) => GenericResponse;
 }
 
 // --- Define what the server emits to the client
