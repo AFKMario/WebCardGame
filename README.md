@@ -19,7 +19,6 @@ This project is mostly for learning.
 | `vote:submit`          | Client ➡ Server | A player submits a vote (yes/no)       |
 | `game:deal-card`       | Server ➡ Client | Deal card to player                    |
 | `game:update`          | Server ➡ All    | Broadcast minimal game state update    |
-| `error:invalid-action` | Server ➡ Client | Notifies client of an invalid action   |
 
 ## Game flow
 
