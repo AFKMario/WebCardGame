@@ -8,17 +8,16 @@ This project is mostly for learning.
 | ---------------------- | --------------- | -------------------------------------- |
 | `player:connect`       | Client ➡ Server | Player joins the game                  |
 | `sync:state`           | Server ➡ Client | Full game state sync for one player    |
-| `game:deal-card`       | Server ➡ Client | Deal card to player                    |
-| `card:face-down`       | Client ➡ Server | Player marks a card face down          |
-| `card:draw`            | Client ➡ Server | Player draws a card from center        |
-| `card:pass`            | Client ➡ Server | Player declares and passes a card      |
 | `card:accept`          | Client ➡ Server | Receiving player accepts a passed card |
+| `card:draw`            | Client ➡ Server | Player draws a card from center        |
+| `card:face-down`       | Client ➡ Server | Player marks a card face down          |
+| `card:flip`            | Server ➡ All    | Server reveals the passed card         |
+| `card:pass`            | Client ➡ Server | Player declares and passes a card      |
 | `card:reject`          | Client ➡ Server | Receiving player rejects a passed card |
-| `card:flip`            | Server ➡ Client | Server reveals the passed card         |
+| `vote:result`          | Server ➡ All    | Broadcast result of the vote           |
 | `vote:start`           | Server ➡ All    | Starts vote on passed card validity    |
 | `vote:submit`          | Client ➡ Server | A player submits a vote (yes/no)       |
-| `vote:result`          | Server ➡ All    | Broadcast result of the vote           |
-| `game:next-turn`       | Server ➡ All    | Advance to the next turn               |
+| `game:deal-card`       | Server ➡ Client | Deal card to player                    |
 | `game:update`          | Server ➡ All    | Broadcast minimal game state update    |
 | `error:invalid-action` | Server ➡ Client | Notifies client of an invalid action   |
 
