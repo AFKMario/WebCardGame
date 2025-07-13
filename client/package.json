@@ -14,8 +14,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "clean": "rm -rf ./src/shared; rm -rf ./node_modules; rm -rf ./dist",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "pre-build": "rm -rf ./src/shared; mkdir ./src/shared; cp -a ../shared/src/* ./src/shared",
+    "build": "npm run pre-build; react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
