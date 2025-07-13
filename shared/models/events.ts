@@ -1,5 +1,3 @@
-// shared/models/events.ts
-
 export const Events = {
   PlayerConnect: "player:connect",
   SyncState: "sync:state",
