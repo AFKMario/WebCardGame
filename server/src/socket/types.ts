@@ -1,20 +1,20 @@
-import { Events } from "../../../shared/models/events";
+import { Events } from "../shared/models/events";
 import {
   CardAcceptPayload,
   CardFaceDownPayload,
   CardFlipPayload,
   CardPassPayload,
   CardRejectPayload,
-} from "../../../shared/payloads/card";
+} from "../shared/payloads/card";
 import {
   GameDealCard,
   GameUpdatePayload,
   SyncStatePayload,
-} from "../../../shared/payloads/sync";
+} from "../shared/payloads/sync";
 import {
   VoteResultPayload,
   VoteSubmitPayload,
-} from "../../../shared/payloads/vote";
+} from "../shared/payloads/vote";
 
 // --- Define what the client sends to the server
 export interface ClientToServerEvents {
